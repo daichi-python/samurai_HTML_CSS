@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <div class="text">
+    <form name="nameForm">
+      <lebel>名前：</lebel>
+      <input id="name" type="text" name="name"/>
+    </form>
+    <form name="mailForm">
+      <label>メールアドレス：</label>
+      <input id="mail" type="text" name="mail"/>
+    </form>
+  </div>
+  <div class="radio">
+    <form name="geneForm">
+      <label>年齢：</label>
+      <input type="radio" name="generation" value="20"/>20代
+      <input type="radio" name="generation" value="30"/>30代
+      <input type="radio" name="generation" value="40"/>40代
+      <input type="radio" name="generation" value="50"/>50代
+    </form>
+  </div>
+  <br>
+  <div class="checkbox">
+    <form name="phoneForm">
+      <label>普段使っているスマホは？</label><br>
+      <input type="checkbox" name="phone" value="iphone"/>iPhone
+      <input type="checkbox" name="phone" value="android"/>Android
+      <input type="checkbox" name="phone" value="flipphone"/>ガラケー
+      <input type="checkbox" name="phone" value="other"/>その他
+    </form>
+  </div>
+  <button id="btn">実行</button>
+  
+  <script>
+    const getText = (textID) => {
+      const text = document.getElementById(textID).value;
+      console.log(text);
+    };
+    const getUserGeneration = () => {
+      const geneForm = document.forms.geneForm;
+      console.log(geneForm.generation.value);
+    };
+    const getPhoneType = () => {
+      const phoneForm = document.forms.phoneForm;
+      phoneForm.phone.forEach(item => {
+        if (item.checked) {
+          console.log(item.value);
+        }
+      });
+    };
+    const btn = document.getElementById("btn");
+    btn.addEventListener('click', () => {
+      getText('name');
+      getText('mail');
+      getUserGeneration();
+      getPhoneType();
+    });
+  </script>
+</body>
+</html>

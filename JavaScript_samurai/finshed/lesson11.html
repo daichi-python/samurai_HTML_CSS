@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript関連のリポジトリ総数 by GitHub</h1>
+    <button id="btn">更新</button>
+    <h2 id="count"></h2>
+    
+    <script>
+        const url = 'https://api.github.com/search/repositories?q=javascript';
+        const btn = document.getElementById("btn");
+        const count = document.getElementById("count");
+        
+        btn.addEventListener('click', () => {
+            count.innerHTML = "";
+            fetch(url)
+            .then(data => data.json())
+            .then(data => {
+                count.innerHTML = `リポジトリの総数は、${data.total_count}件です`;
+            });
+        });
+    </script>
+</body>
+</html>

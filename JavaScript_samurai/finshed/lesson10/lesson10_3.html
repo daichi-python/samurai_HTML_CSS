@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samurai Lesson</title>
+    <style>
+        #dialog {
+            width: 250px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #aaa;
+            box-shadow: 2px 2px 4px #888;
+        }
+    </style>
+</head>
+<body>
+    <form id="dialog" name="dialog">
+        <p>ボタンをクリックしてください</p>
+        <input type="button" name="yes" value="はい"/>
+        <input type="button" name="no" value="いいえ"/>
+        <input type="button" name="cancel" value="キャンセル"/>
+    </form>
+    <p id="result"></p>
+    <script>
+        const form = document.forms.dialog;
+        form.yes.addEventListener('click', () => {
+            const result = document.getElementById("result");
+            result.innerHTML = "「はい」がクリックされました";
+        });
+        form.no.addEventListener('click', () => {
+            const result = document.getElementById("result");
+            result.innerHTML = "「いいえ」がクリックされました";
+        });
+        form.cancel.addEventListener('click', () => {
+            const result = document.getElementById("result");
+            result.innerHTML = "「キャンセル」がクリックされました";
+        });
+    </script>
+</body>
+</html>

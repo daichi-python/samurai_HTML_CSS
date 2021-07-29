@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>通貨換算</title>
+</head>
+<body>
+    <div class="commandgame-wrapper">
+        <h1>通貨換算アプリ</h1>
+        <div class="getDoller">
+            <p>ドルを入力</p>
+            <input id="doller" type="text" name="doller" value="入力してください">
+            <input type="button" onclick="getYen()" value="OK"/>
+            <p id="output-yen"></p>
+        </div>
+        <script language="javascript" type="text/javascript">
+            const getYen = () => {
+                let doller = document.getElementById("doller");
+                let inputDoller = doller.value;
+                let output = Number(inputDoller) * 108;
+                document.getElementById("output-yen").innerHTML = String(output) + "円です";
+            };
+        </script>
+    </div>
+</body>
+</html>
