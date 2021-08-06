@@ -1,0 +1,64 @@
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px 0 30px;
+    background-color: #DCDCDC;
+}
+
+.main h1 {
+    font-size: 50px;
+}
+
+.main p {
+    font-size: 18px;
+}
+
+.fw-list {
+    background-color: #CCCCCC;
+    width: 200px;
+    height: 280px;
+    margin: 50px 0;
+    padding: 5px 10px;
+}
+
+.fw-list li {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.framework {
+    margin: 80px 0;
+}
+
+.framework h3 {
+    font-weight: normal;
+    padding-top: 20px;
+}
+
+.fw {
+    padding-bottom: 30px;
+}
+
+.fw img {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.fw h1 {
+    font-size: 50px;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.bar {
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.bar:hover {
+    background-color: #D3D3D3;
+}
+
+.detail {
+    display: none;
+}

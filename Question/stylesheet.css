@@ -49,3 +49,31 @@
     font-size: 50px;
     border-bottom: 1px solid #C0C0C0;
 }
+
+.bar {
+    cursor: pointer;
+}
+
+.detail {
+    display: none;
+}
+
+/*#ang-detail {
+    display: none;
+}
+
+#vue-detail {
+    display: none;
+}
+
+#rea-detail {
+    display: none;
+}
+
+#jqu-detail {
+    display: none;
+}
+
+#riot-detail {
+    display: none;
+}*/
